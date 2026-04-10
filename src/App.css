@@ -1,0 +1,119 @@
+.page-shell {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0 72px;
+}
+
+.hero-card {
+  padding: 48px;
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top left, rgba(170, 59, 255, 0.14), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 255, 255, 0.94));
+  box-shadow: var(--shadow);
+  text-align: left;
+}
+
+.eyebrow {
+  margin-bottom: 16px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-copy {
+  max-width: 640px;
+  font-size: 18px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.primary-action,
+.secondary-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  color: var(--text-h);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.primary-action {
+  background: var(--text-h);
+  color: var(--bg);
+  border-color: var(--text-h);
+}
+
+.secondary-action {
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.primary-action:hover,
+.secondary-action:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.info-card {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.82);
+  text-align: left;
+}
+
+.info-card p {
+  margin-top: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero-card {
+    background:
+      radial-gradient(circle at top left, rgba(192, 132, 252, 0.16), transparent 30%),
+      linear-gradient(180deg, rgba(31, 32, 40, 0.92), rgba(22, 23, 29, 0.96));
+  }
+
+  .secondary-action,
+  .info-card {
+    background: rgba(31, 32, 40, 0.82);
+  }
+}
+
+@media (max-width: 900px) {
+  .page-shell {
+    width: min(100% - 24px, 1120px);
+    padding: 24px 0 48px;
+  }
+
+  .hero-card {
+    padding: 28px 20px;
+    border-radius: 22px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-copy {
+    font-size: 16px;
+  }
+}
